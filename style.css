@@ -498,6 +498,11 @@ input[type="button"]:focus,
 
 }
 
+.hamburger {
+  background: none !important;
+  box-shadow: none !important;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -619,6 +624,8 @@ footer p {
     flex-direction: column;
   }
 }
+
+
 
 .project-card {
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s;
