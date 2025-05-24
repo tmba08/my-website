@@ -502,14 +502,17 @@ input[type="button"]:focus,
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 36px;
   height: 36px;
   background: none !important;
+  background-color: transparent !important;
   border: none;
   cursor: pointer;
   z-index: 1100;
   margin-left: 10px;
   box-shadow: none !important;
+  padding: 0;
 }
 footer {
   display: flex;
@@ -558,6 +561,7 @@ footer p {
 .social-links a:hover i {
   color: #f7a8b8;
 }
+
 
 
 .hamburger span {
