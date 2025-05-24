@@ -499,10 +499,18 @@ input[type="button"]:focus,
 }
 
 .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   background: none !important;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: 10px;
   box-shadow: none !important;
 }
-
 footer {
   display: flex;
   justify-content: center;
@@ -551,18 +559,7 @@ footer p {
   color: #f7a8b8;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-  margin-left: 10px;
-}
+
 .hamburger span {
   display: block;
   height: 4px;
