@@ -210,12 +210,18 @@
           
           <section id="contact" class="fade-in">
             <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/mkgraqlp" method="POST">
+            <form action="https://formspree.io/f/mkgraqlp" method="POST" target="hidden_iframe" onsubmit="showThankYou();">
   <input type="text" name="name" placeholder="Your Name" required />
   <input type="email" name="email" placeholder="Your Email" required />
   <textarea name="message" placeholder="Your Message" required></textarea>
   <button type="submit">Send</button>
 </form>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+<div id="thankyou-message" style="display:none; color: #b177ce; font-size: 1.2rem; margin-top: 20px;">
+  Thank you for reaching out! I'll get back to you soon.
+</div>
+
+
             <div class="social-links">
               <a
                 href="https://www.linkedin.com/in/tanatswa-mbanje-2684202b6/"

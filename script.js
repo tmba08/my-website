@@ -106,3 +106,19 @@ document.querySelectorAll(".accordion-btn").forEach((btn) => {
     if (panel) panel.classList.toggle("open");
   });
 });
+
+/**
+ * Show a thank you message after form submission and hide the form.
+ * This is used for the contact form to prevent redirect after using Formspree.
+ * Called via the form's onsubmit attribute.
+ */
+function showThankYou() {
+  setTimeout(function() {
+    // Hide the contact form
+    const form = document.querySelector('#contact form');
+    if (form) form.style.display = 'none';
+    // Show the thank you message
+    const thankYou = document.getElementById('thankyou-message');
+    if (thankYou) thankYou.style.display = 'block';
+  }, 500);
+}
