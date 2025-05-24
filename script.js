@@ -88,11 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     type();
   }
+
+
+  const hamburger = document.querySelector('.hamburger');
+  const navUl = document.querySelector('header nav ul');
+  if (hamburger && navUl) {
+    hamburger.addEventListener('click', () => {
+      navUl.classList.toggle('open');
+    });
+    
+    navUl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navUl.classList.remove('open');
+      });
+    });
+  }
 });
 
 document.querySelectorAll(".accordion-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
-    // Close all other accordions
+   
     document.querySelectorAll(".accordion-btn").forEach((otherBtn) => {
       if (otherBtn !== btn) {
         otherBtn.classList.remove("active");
@@ -107,17 +122,13 @@ document.querySelectorAll(".accordion-btn").forEach((btn) => {
   });
 });
 
-/**
- * Show a thank you message after form submission and hide the form.
- * This is used for the contact form to prevent redirect after using Formspree.
- * Called via the form's onsubmit attribute.
- */
+
 function showThankYou() {
   setTimeout(function() {
-    // Hide the contact form
+    
     const form = document.querySelector('#contact form');
     if (form) form.style.display = 'none';
-    // Show the thank you message
+    
     const thankYou = document.getElementById('thankyou-message');
     if (thankYou) thankYou.style.display = 'block';
   }, 500);

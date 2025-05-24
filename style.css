@@ -546,6 +546,61 @@ footer p {
   color: #f7a8b8;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: 10px;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #b177ce;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fdeef4;
+    flex-direction: column;
+    gap: 0;
+    width: 180px;
+    box-shadow: 0 8px 24px rgba(76, 53, 212, 0.10);
+    border-radius: 12px;
+    padding: 18px 0;
+    z-index: 1001;
+  }
+  header nav ul.open {
+    display: flex;
+  }
+  header nav ul li {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  header nav ul li a {
+    padding: 12px 24px;
+    width: 100%;
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
